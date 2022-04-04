@@ -1,0 +1,876 @@
+html {
+  font-size: 62.5%; /* 16px x 62.5 = 10px = 1rem */
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  height: 100vh;
+  font-size: 1.6rem;
+  font-family: Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+#root {
+  height: 100%;
+}
+
+/* Layout */
+.grid-container {
+  display: grid;
+  grid-template-areas:
+    'header'
+    'main'
+    'footer';
+  grid-template-columns: 1fr;
+  grid-template-rows: 5rem 1fr 5rem;
+  height: 100%;
+}
+header {
+  grid-area: header;
+  background-color: #203040;
+}
+main {
+  grid-area: main;
+  padding: 1rem;
+}
+footer {
+  grid-area: footer;
+  background-color: #203040;
+  color: #ffffff;
+}
+/* Common */
+h1 {
+  font-size: 1.8rem;
+  padding: 1rem 0;
+}
+h2 {
+  font-size: 1.6rem;
+  padding: 1rem 0;
+}
+
+a {
+  text-decoration: none;
+}
+a:hover {
+  color: #ff8000;
+}
+img {
+  border-radius: 0.5rem;
+}
+img.small {
+  max-width: 5rem;
+  width: 100%;
+}
+img.medium-cart{
+  max-width: 20rem;
+}
+img.medium-order{
+  max-width: 8rem;
+}
+img.medium {
+  max-width: 27rem;
+  width: 100%;
+  max-height: 27rem;
+  
+}
+img.large {
+  width: 10%;
+}
+
+/* Card */
+.card {
+  border: 0.1rem #c0c0c0 solid;
+  background-color: #f8f8f8;
+  border-radius: 0.5rem;
+  margin: 1rem;
+
+}
+.card-body {
+  padding: 1rem;
+}
+.card-body > * {
+  margin-bottom: 0.5rem;
+}
+.price {
+  font-size: 2rem;
+}
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  text-align: left;
+  margin-right: 20px;
+  margin-top: 5px;
+}
+.row.center {
+  justify-content: center;
+}
+
+.row.start {
+  justify-content: flex-start;
+}
+
+
+.rating span {
+  color: #f0c040;
+  margin: 0.1rem;
+}
+.rating span:last-child {
+  color: #404040;
+}
+
+
+img.large {
+  width: 90%;
+  
+}
+.col-3{
+  background-color:white;
+  color: black;
+border: 1px solid black; 
+border-radius: 10px;
+padding: 15px;
+  margin-left: 5px;
+  margin-top: 15px;
+
+}
+.col-4{
+  border: 1px solid black;
+  padding: 15px;
+  margin-left: 350px;
+  margin-top: 25px;
+  width: 30%;
+  background-color: white;
+  color: black;
+  border-radius: 10px;
+}
+.order-col-4{
+  border: 1px solid black;
+  padding: 15px;
+  width: 25%;
+  background-color: white;
+  color: black;
+  border-radius: 10px;
+  max-height: 220px;
+}
+.col-1 {
+  flex: 1 1 25rem;
+  margin-top: -330px;
+}
+.col-2 {
+  flex: 2 1 50rem;
+  margin-left: 20px;
+}
+ul {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+li {
+  margin-top: 1rem;
+}
+input, select, textarea, button {
+  padding: 1rem;
+  border-radius: 0.5rem;
+  border: 0.1rem #a4a4a4 solid;
+  font-size: 1.6rem;
+  cursor: pointer;
+}
+input:hover, select:hover,
+textarea:hover, button:hover {
+  border: 0.1rem #404040 solid;
+}
+button.primary {
+  background-color: #f3b60d;
+  color: white;
+}
+button.block {
+  width: 100%;
+}
+.wish-header{
+  border: 1px solid black;
+  margin: 0px;
+}
+.wish-para{
+  margin: 0px;
+}
+.success {
+  color: #20a020;
+}
+.danger {
+  color: #a02020;
+}
+.row-container{
+  border: 1px solid blue;
+  color: white;
+  background-color: blue;
+  padding-bottom: 15px;
+  margin-bottom: 20px;
+}
+.brand, .cart, .sign{
+  color: white;
+}
+.brand{
+  font-size: 4rem;
+  padding-bottom: 5px;
+  margin-left: 15px;
+}
+.brand:hover{
+  color:white;
+}
+.cart{
+  margin-top: -60px;
+  margin-right: 15px;
+}
+.cart:hover{
+  color: #20a020;
+}
+.sign{
+  margin-right: 5px;
+}
+.nav-cart{
+  cursor: pointer;
+  color: white;
+}
+.nav-cart:hover{
+  color: violet
+}
+.title{
+  position: absolute;
+  color: white;
+}
+.row-end{
+  float: right;
+  margin-top: -45px;
+}
+.badge {
+  background-color: #f02020;
+  color: #ffffff;
+  border-radius: 50%;
+  padding: 0.2rem 0.7rem;
+  font-size: 1.4rem;
+  margin-left: 0.2rem;
+}
+img.small {
+  max-width: 5rem;
+  width: 100%;
+}
+.logo{
+  max-width: 15rem;
+  width: 100%;
+  cursor: pointer;
+}
+.min-30 {
+  min-width: 30rem;
+}
+.card-buy{
+  margin-bottom: 0.5rem;
+  padding: 1rem;
+  margin-top: 400px;
+}
+.card-top{
+  margin-bottom: 0.5rem;
+  padding: 1rem;
+  margin-top: 200px;
+}
+
+.form {
+  max-width: 60rem;
+  margin: 0 auto;
+  border: 1px solid black;
+  border-radius: 15px;
+  background-color: blue;
+  color: white;
+  padding: 20px;
+}
+.form > div {
+  display: flex;
+  flex-direction: column;
+  margin: 1rem;
+}
+.form label {
+  margin: 1rem 0;
+}
+.form-rating{
+  max-width: 60rem;
+  margin: 0 auto;
+  border: 1px solid black;
+  border-radius: 15px;
+  background-color: blue;
+  color: white;
+  padding: 20px;
+}
+.form-rating >div{
+  display: flex;
+  flex-direction: column;
+  margin: 1rem;
+}
+.form-rating label{
+  margin: 1rem 0;
+}
+.dropdown {
+  display: inline-block;
+  position: relative;
+  color: white;
+  margin-left: 20px;
+  
+}
+.dropdown-content {
+  position: absolute;
+  display: none;
+  right: 0;
+  min-width: 16rem;
+  padding: 1rem;
+  z-index: 1;
+  background-color: blue ;
+  margin: 10px;
+  border-radius: 0.5rem;
+  color: white;
+  margin-top: -5px;
+}
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+.signin{
+  color: white;
+  font-size: 15pt;
+}
+.signin1{
+  color: white;
+  font-size: 15pt;
+  margin-left: 10px;
+}
+
+.foot{
+  margin-top: 25px;
+  text-align: center;
+  border: 1px solid blue;
+  color: white;
+  background-color: blue;
+  padding: 10px;
+}
+
+.foot-order{
+  margin-top: 175px;
+  text-align: center;
+  border: 1px solid blue;
+  color: white;
+  background-color: blue;
+  padding: 10px;
+  justify-content: flex-end;
+}
+.danger{
+  border: 1px solid rgb(167, 164, 164);
+  color: red;
+  background-color: rgb(233, 139, 139);
+}
+.pics img{
+  width: 75px;
+}
+.gateway{
+  margin-top: 25px;
+  margin-left: 350px;
+  width: 525px;
+  height: 380px;
+  border: 1px solid black;
+  border-radius: 1rem;
+ background-color: rgb(253, 247, 247);
+ background-image: url("i500.jpg");
+}
+.field{
+  width: 90%
+}
+.field2{
+  width: 30%;
+}
+.field1{
+  width: 100%;
+}
+.card-name{
+  position: absolute;
+}
+.card-ccv{
+  float: right;
+  position: relative;
+}
+.card-name, .card-no, .card-ccv{
+  margin: 10px;
+}
+#years{
+  margin-left: 15px;
+}
+.date{
+  clear: both;
+  margin-left: 25px;
+  margin-right: 5px;
+}
+#months{
+  margin-left: 10px;
+  margin-top: 30px;
+}
+.pics{
+  float: right;
+}
+.heading{
+  font-size: 22pt;
+  margin-right: 25px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+.move{
+  margin-top: 15px;
+  margin-left: 15px;
+}
+.btn{
+  margin: 20px;
+  width: 90%;
+  background-color: blue;
+  color: white;
+}
+.ord{
+  margin-left: 25px;
+}
+.h9{
+  text-align: center;
+  margin-left: 25px;
+}
+.table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.table td,
+.table th {
+  text-align: left;
+  border: 0.1rem solid #e4e4e4;
+  padding: 0.5rem;
+}
+.table button {
+  margin: 0 0.2rem;
+}
+
+.search button {
+  border-radius: 0 0.5rem 0.5rem 0;
+
+}
+.search input {
+  border-radius: 0.5rem 0 0 0.5rem;
+  border-right: none;
+  margin-left: 0.5rem;
+padding-right: 100px;
+
+}
+.searchicon{
+  background-color: rgb(190, 185, 185);
+}
+.row1{
+  margin-left: 400px;
+  margin-top: 5px;
+}
+.column1{
+  position: absolute;
+  margin-left: 15px;
+}
+.column3{
+  width: 80%;
+  position: relative;
+  margin-left: 200px;
+}
+.review{
+  margin-left: 50px;
+ 
+}
+.rate{
+  width: 100%
+}
+.rate1{
+  width: 90%;
+}
+.cart1{
+  color: white;
+  margin-right: 20px;
+}
+.wishicon{
+  color: white;
+}
+.fa-heart{
+  color: white;
+  margin-top: 5px;
+  margin-left: 1px;
+  cursor: pointer;
+}
+.fa-heart:hover{
+  color: red;
+}
+.fa-heart:active{
+  color: red;
+}
+.fa-heart:active ::after{
+  color: red;
+}
+.wishbox{
+  border: 1px solid black;
+  margin-right: 220px;
+padding: 1px;
+border-radius: 60%;
+background-color:rgb(197, 126, 126);
+padding-right: 1px;
+}
+
+.row-wish {
+  margin-right: 25px;
+  align-items: center;
+  display: flex;
+ flex-wrap: wrap;
+margin-left: 50px;
+}
+
+.wish-content{
+  margin-right: 25px;
+  margin-left: 25px;
+}
+
+.carousel .slide img {
+ width: 30rem;
+ max-height: 30rem;
+}
+.carousel{
+  background-color: black;
+  margin-top: 25px;
+}
+.button-wish{
+  padding: 1rem;
+  border-radius: 0.5rem;
+  border: 0.1rem #a4a4a4 solid;
+  font-size: 1.6rem;
+  cursor: pointer;
+  width: 100%;
+  background-color: red;
+  color: white;
+}
+.button-add{
+  padding: 1rem;
+  border-radius: 0.5rem;
+  border: 0.1rem #a4a4a4 solid;
+  font-size: 1.6rem;
+  cursor: pointer;
+  width: 100%;
+  background-color:rgb(243, 213, 45);
+  color: black;
+}
+
+.wish{
+  margin-left: 20px;
+}
+.foot-icons{
+  margin-right: 5px;
+  text-align: right;
+  position: relative;
+}
+.fa-facebook, .fa-twitter,.fa-instagram{
+  margin-right: 10px;
+  float: right;
+}
+.foot-text{
+  margin-right: 10px;
+}
+
+.foot-cart{
+  margin-top: 200px;
+  text-align: center;
+  border: 1px solid blue;
+  color: white;
+  background-color: blue;
+  padding: 10px;
+  justify-content: flex-end;
+}
+.foot-txt{
+  text-align: left;
+}
+.foot-end{
+margin-left: 350px;
+}
+.foot-txt1{
+  text-align: left;
+  position: absolute;
+}
+.foot1{
+  margin-top: 80px;
+  text-align: center;
+  border: 1px solid blue;
+  color: white;
+  background-color: blue;
+  padding: 10px;
+  justify-content: flex-end;
+}
+.fa-trash-alt{
+  color: black;
+}
+.create{
+  color: white;
+}
+
+
+.dropdown-cate {
+  display: inline-block;
+  position: relative;
+  color:white;
+}
+.dropdown-cate-content {
+  position: absolute;
+  display: none;
+  right: 0;
+  min-width: 16rem;
+  padding: 1rem;
+  z-index: 1;
+  background-color: blue ;
+  margin: 10px;
+  border-radius: 0.5rem;
+  color: white;
+  margin-top: -5px;
+}
+.dropdown-cate:hover .dropdown-cate-content {
+  display: block;
+}
+.card-body-list{
+  border: 1px solid black;
+  padding: 15px;
+  width: 20%;
+ margin: 10px;
+ border-radius: 5px;
+
+}
+.card-list{
+  display: flex;
+ flex-wrap: wrap;
+}
+.button-list{
+  width: 100%;
+  margin-top: 15px;
+  background-color:red;
+}
+
+.button-list1{
+  width: 100%;
+  margin-top: 15px;
+  background-color:rgb(93, 93, 206);
+}
+.list-text{
+  margin-top: 10px;
+}
+
+.card-wish {
+  border: 0.1rem #c0c0c0 solid;
+  background-color: #f8f8f8;
+  border-radius: 0.5rem;
+  margin: 1rem;
+
+}
+.card-wish-body {
+  padding: 1rem;
+
+}
+.card-wish-body > * {
+  margin-bottom: 0.5rem;
+}
+.row-cart{
+  border: 1px solid black;
+margin: 10px;
+  padding: 10px;
+  border-radius: 5px;
+ 
+text-align: center;}
+.cart-text{
+  margin-bottom: 10px;
+}
+.cart-view{
+  display: flex;
+  flex-wrap: wrap;
+}
+.cart-total{
+ border: 1px solid black;
+  width: 25%;
+  padding: 20px;
+  float: right;
+  border-radius: 5px;
+  background-color: #f8f8f8;
+}
+.order-view{
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: 25px;
+}
+.order-text{
+  border: 1px solid black;
+  border-radius: 5px;
+  padding: 10px;
+  margin: 10px;
+}
+.order-content{
+  margin-top: 10px;
+}
+.order{
+  margin-left: 20px;
+}
+.order-btn{
+  width: 100%;
+ background-color: rgb(69, 240, 69);
+}
+.image-box{
+  background-color: white;
+}
+.user-view{
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: 25px;
+}
+.users{
+  margin-left: 25px;
+}
+.user-head{
+  border: 1px solid black;
+  padding: 10px;
+  border-radius: 5px;
+  margin: 10px;
+}
+.user-body{
+  margin-bottom: 10px;
+}
+.user-btn{
+  width: 100%;
+  background-color:rgb(101, 101, 211);
+}
+.user-btn1{
+  width: 100%;
+  background-color: red;
+}
+.fa-plus-square{
+  color: rgb(7, 150, 7);
+}
+.order-col1, .order-col3, .order-col4{
+  border: 1px solid black;
+  border-radius: 5px;
+  width: 20%;
+  max-height: 200px;
+  padding: 10px;
+  margin: 10px;
+}
+.order-col2 {
+  border: 1px solid black;
+  border-radius: 5px;
+  width: 20%;
+  padding: 10px;
+  margin: 10px;
+}
+.order-col20 {
+  border: 1px solid black;
+  border-radius: 5px;
+  width: 20%;
+  padding: 10px;
+  margin: 10px;
+  margin-left: 30px;
+}
+.min-30{
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.order-history{
+  display: flex;
+  flex-wrap: wrap;
+}
+.order-name{
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.address{
+  margin-top: 10px;
+}
+.img-order-medium{
+  max-width: 20rem;
+  max-height: 20rem;
+  
+}
+
+.footer {
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: blue;
+  color: white;
+  text-align: center;
+  margin-top: 50px;
+  position: fixed;
+}
+ 
+.des{
+  float: left;
+  text-align: center;
+  padding-top: 15px;
+  padding-left: 10px;
+  cursor: pointer;
+}
+ 
+.des1{
+  float: right;
+  padding-right: 10px;
+}
+ 
+.dis{
+  color: #e4e4e4;
+}
+ 
+.footer-copyright{
+  padding-top: 10px;
+}
+.contact{
+  text-align: center;
+  padding-left: 40px;
+}
+ 
+.form1{
+margin-left: 350px;  
+border: 1px solid black;
+padding-right: 170px;
+padding-left: 25px;
+border-radius: 15px;
+background-color: blue;
+color: white;
+}
+ 
+.form1 > div {
+  display: flex;
+  flex-direction: column;
+  margin: 1rem;
+}
+ 
+.form1 label {
+  margin: 1rem 0;
+}
+.mb-3{
+  width: 140%;
+}
+.btn-lg{
+  width: 140%;
+  background-color: #f3b60d;
+}
+.para1, .para2, .para3{
+  margin: 5px;
+  width: 30%;
+  font-size: 2.2rem;
+  border: 1px solid black;
+  padding: 10px;
+  border-radius: 5px;
+  color: white;
+  background-color: blue;
+}
+.about{
+  display: flex;
+  flex-wrap: wrap;
+}
+.margin{
+  margin-bottom: 125px;
+}
+.margin-cart{
+  margin-bottom: 175px;
+}
